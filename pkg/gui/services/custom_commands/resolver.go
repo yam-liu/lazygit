@@ -104,10 +104,16 @@ func (self *Resolver) resolveMenuOption(option *config.CustomCommandMenuOption, 
 		return nil, err
 	}
 
+	key, err := resolveTemplate(option.Key)
+	if err != nil {
+		return nil, err
+	}
+
 	return &config.CustomCommandMenuOption{
 		Name:        name,
 		Description: description,
 		Value:       value,
+		Key:         key,
 	}, nil
 }
 

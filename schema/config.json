@@ -936,6 +936,10 @@
                         "examples": [
                           "feature"
                         ]
+                      },
+                      "key": {
+                        "type": "string",
+                        "description": "The bound key"
                       }
                     },
                     "additionalProperties": false,

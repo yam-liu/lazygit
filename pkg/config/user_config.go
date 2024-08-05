@@ -662,6 +662,8 @@ type CustomCommandMenuOption struct {
 	Description string `yaml:"description"`
 	// The value that will be used in the command
 	Value string `yaml:"value" jsonschema:"example=feature,minLength=1"`
+	// The bound key
+	Key string `yaml:"key"`
 }
 
 func GetDefaultConfig() *UserConfig {
